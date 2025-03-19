@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.2'
+        php-version: '8.1'
         tools: composer, php-cs-fixer
         extensions: mbstring, xml, ctype, json, pdo, bcmath
     - uses: actions/checkout@v4
