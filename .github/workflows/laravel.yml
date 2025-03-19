@@ -36,7 +36,6 @@ jobs:
       run: |
           if (!(Test-Path "database")) { New-Item -ItemType Directory -Path "database" -Force }
       shell: pwsh 
-        touch database/database.mysql
     - name: Execute tests (Unit and Feature tests) via PHPUnit/Pest
       env:
         DB_CONNECTION: mysql
