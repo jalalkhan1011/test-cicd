@@ -34,7 +34,7 @@ jobs:
     - name: Create database directory (Windows)
       if: runner.os == 'Windows'
       run: if (!(Test-Path "database")) { New-Item -ItemType Directory -Path "database" }
-      shell: pwsh
+      shell: pwsh 
         touch database/database.mysql
     - name: Execute tests (Unit and Feature tests) via PHPUnit/Pest
       env:
