@@ -33,7 +33,8 @@ jobs:
       run: mkdir -p database
     - name: Create database directory (Windows)
       if: runner.os == 'Windows'
-      run: if (!(Test-Path "database")) { New-Item -ItemType Directory -Path "database" }
+      run: |
+          if (!(Test-Path "database")) { New-Item -ItemType Directory -Path "database" -Force }
       shell: pwsh 
         touch database/database.mysql
     - name: Execute tests (Unit and Feature tests) via PHPUnit/Pest
